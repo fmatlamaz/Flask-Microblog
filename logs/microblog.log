@@ -88,3 +88,5 @@ Traceback (most recent call last):
   File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 919, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'reset_password_request'. Did you mean 'edit_profile' instead?
+2024-01-11 20:11:38,609 INFO: Microblog startup [in C:\Users\fmatl\Documents\Flask-Microblog\app\__init__.py:44]
+2024-01-11 21:25:54,774 INFO: Microblog startup [in C:\Users\fmatl\Documents\FlaskMicroblog\app\__init__.py:49]
