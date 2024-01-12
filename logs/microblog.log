@@ -1,28 +1,4 @@
-2024-01-11 19:19:44,437 ERROR: Exception on /explore [GET] [in C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py:825]
-Traceback (most recent call last):
-  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\elements.py", line 1602, in __getattr__
-    return getattr(self.comparator, key)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: 'Comparator' object has no attribute 'dec'. Did you mean: 'desc'?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\attributes.py", line 472, in __getattr__
-    return getattr(self.comparator, key)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 1335, in __getattr__
-    return self._fallback_getattr(key)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\properties.py", line 474, in _fallback_getattr
-    return getattr(self.__clause_element__(), key)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\elements.py", line 1604, in __getattr__
-    raise AttributeError(
-AttributeError: Neither 'AnnotatedColumn' object nor 'Comparator' object has an attribute 'dec'. Did you mean: 'desc'?
-
-The above exception was the direct cause of the following exception:
-
+2024-01-11 20:10:13,548 ERROR: Exception on /login [GET] [in C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py:825]
 Traceback (most recent call last):
   File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
     response = self.full_dispatch_request()
@@ -36,41 +12,38 @@ Traceback (most recent call last):
   File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 852, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fmatl\Documents\Flask-Microblog\app\routes.py", line 165, in explore
-    query = sa.select(Post).order_by(Post.timestamp.dec())
-                                     ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\attributes.py", line 474, in __getattr__
-    raise AttributeError(
-AttributeError: Neither 'InstrumentedAttribute' object nor 'Comparator' object associated with Post.timestamp has an attribute 'dec'. Did you mean: 'desc'?
-2024-01-11 19:27:34,372 INFO: Microblog startup [in C:\Users\fmatl\Documents\Flask-Microblog\app\__init__.py:44]
-2024-01-11 19:27:38,474 ERROR: Exception on /explore [GET] [in C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py:825]
-Traceback (most recent call last):
-  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\elements.py", line 1602, in __getattr__
-    return getattr(self.comparator, key)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: 'Comparator' object has no attribute 'dec'. Did you mean: 'desc'?
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\attributes.py", line 472, in __getattr__
-    return getattr(self.comparator, key)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 1335, in __getattr__
-    return self._fallback_getattr(key)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\properties.py", line 474, in _fallback_getattr
-    return getattr(self.__clause_element__(), key)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\sql\elements.py", line 1604, in __getattr__
-    raise AttributeError(
-AttributeError: Neither 'AnnotatedColumn' object nor 'Comparator' object has an attribute 'dec'. Did you mean: 'desc'?
-
-The above exception was the direct cause of the following exception:
-
+  File "C:\Users\fmatl\Documents\Flask-Microblog\app\routes.py", line 71, in login
+    return render_template('login.html', title='Sign In', form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\fmatl\Documents\Flask-Microblog\app\templates\login.html", line 2, in top-level template code
+    {% import "bootstrap_wtf.html" as wtf %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fmatl\Documents\Flask-Microblog\app\templates\base.html", line 58, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fmatl\Documents\Flask-Microblog\app\templates\login.html", line 10, in block 'content'
+    <a href="{{ url_for('reset_password_request') }}">Click to Reset It</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'reset_password_request'. Did you mean 'edit_profile' instead?
+2024-01-11 20:10:15,362 ERROR: Exception on /login [GET] [in C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py:825]
 Traceback (most recent call last):
   File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
     response = self.full_dispatch_request()
@@ -84,40 +57,34 @@ Traceback (most recent call last):
   File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 852, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fmatl\Documents\Flask-Microblog\app\routes.py", line 153, in explore
-    query = sa.select(Post).order_by(Post.timestamp.dec())
-                                     ^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\sqlalchemy\orm\attributes.py", line 474, in __getattr__
-    raise AttributeError(
-AttributeError: Neither 'InstrumentedAttribute' object nor 'Comparator' object associated with Post.timestamp has an attribute 'dec'. Did you mean: 'desc'?
-2024-01-11 19:30:50,845 INFO: Microblog startup [in C:\Users\fmatl\Documents\Flask-Microblog\app\__init__.py:44]
-2024-01-11 19:36:41,075 INFO: Microblog startup [in C:\Users\fmatl\Documents\Flask-Microblog\app\__init__.py:44]
-2024-01-11 19:40:37,922 INFO: Microblog startup [in C:\Users\fmatl\Documents\Flask-Microblog\app\__init__.py:44]
-2024-01-11 19:40:39,509 ERROR: Exception on /explore [GET] [in C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py:825]
-Traceback (most recent call last):
-  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 869, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 852, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\fmatl\Documents\Flask-Microblog\app\routes.py", line 180, in explore
-    return render_template("index.html", title='Explore', posts=posts.items,next_url=next_url, prev_url=prev_url)
-                                                                                                        ^^^^^^^^
-UnboundLocalError: cannot access local variable 'prev_url' where it is not associated with a value
-2024-01-11 19:42:30,938 INFO: Microblog startup [in C:\Users\fmatl\Documents\Flask-Microblog\app\__init__.py:44]
-2024-01-11 19:42:33,930 INFO: Microblog startup [in C:\Users\fmatl\Documents\Flask-Microblog\app\__init__.py:44]
-2024-01-11 19:44:54,999 INFO: Microblog startup [in C:\Users\fmatl\Documents\Flask-Microblog\app\__init__.py:44]
-2024-01-11 19:45:09,295 INFO: Microblog startup [in C:\Users\fmatl\Documents\Flask-Microblog\app\__init__.py:44]
+  File "C:\Users\fmatl\Documents\Flask-Microblog\app\routes.py", line 71, in login
+    return render_template('login.html', title='Sign In', form=form)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\fmatl\Documents\Flask-Microblog\app\templates\login.html", line 2, in top-level template code
+    {% import "bootstrap_wtf.html" as wtf %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fmatl\Documents\Flask-Microblog\app\templates\base.html", line 58, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fmatl\Documents\Flask-Microblog\app\templates\login.html", line 10, in block 'content'
+    <a href="{{ url_for('reset_password_request') }}">Click to Reset It</a>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\fmatl\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\routing\map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'reset_password_request'. Did you mean 'edit_profile' instead?
