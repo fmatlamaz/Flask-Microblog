@@ -90,3 +90,9 @@ Traceback (most recent call last):
 werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'reset_password_request'. Did you mean 'edit_profile' instead?
 2024-01-11 20:11:38,609 INFO: Microblog startup [in C:\Users\fmatl\Documents\Flask-Microblog\app\__init__.py:44]
 2024-01-11 21:25:54,774 INFO: Microblog startup [in C:\Users\fmatl\Documents\FlaskMicroblog\app\__init__.py:49]
+2024-01-13 11:07:41,833 INFO: Microblog startup [in C:\Users\fmatl\Documents\FlaskMicroblog\app\__init__.py:55]
+2024-01-13 11:10:38,671 INFO: Microblog startup [in C:\Users\fmatl\Documents\FlaskMicroblog\app\__init__.py:55]
+2024-01-13 11:10:53,212 INFO: Microblog startup [in C:\Users\fmatl\Documents\FlaskMicroblog\app\__init__.py:55]
+2024-01-13 11:11:19,500 INFO: Microblog startup [in C:\Users\fmatl\Documents\FlaskMicroblog\app\__init__.py:55]
+2024-01-13 11:11:30,930 INFO: Microblog startup [in C:\Users\fmatl\Documents\FlaskMicroblog\app\__init__.py:55]
+2024-01-13 11:11:59,695 INFO: Microblog startup [in C:\Users\fmatl\Documents\FlaskMicroblog\app\__init__.py:55]
