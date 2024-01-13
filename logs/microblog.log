@@ -99,3 +99,4 @@ werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'reset_
 2024-01-13 11:21:38,530 INFO: Microblog startup [in C:\Users\fmatl\Documents\FlaskMicroblog\app\__init__.py:55]
 2024-01-13 11:21:46,657 INFO: Microblog startup [in C:\Users\fmatl\Documents\FlaskMicroblog\app\__init__.py:55]
 2024-01-13 11:38:06,118 INFO: Microblog startup [in C:\Users\fmatl\Documents\FlaskMicroblog\app\__init__.py:55]
+2024-01-13 11:38:31,891 INFO: Microblog startup [in C:\Users\fmatl\Documents\FlaskMicroblog\app\__init__.py:55]
